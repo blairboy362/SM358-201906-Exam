@@ -1,0 +1,16 @@
+\subsection{}
+Born's rule states that the probability of finding a particle at a particular position is given by the square of the wave function. For a probability to make sense, the probabilities of all possible positions must sum to 1. Normalisation ensures that this is the case.
+
+\subsection{}
+The probability, $ p $, is given by:
+\begin{align*}
+    p & = \abs{\int_0^a \Psi^* \del{x, 0} \Psi \del{x, 0} \dif x}^2\\
+    & = \frac{1}{\pi a^2} \abs{\int_0^a \operatorname{e}^{-x^2/a^2}  \dif x}^2
+\end{align*}
+
+Let $ u = \frac{x}{a} $; $ \od{u}{x} = \frac{1}{a} $; $ \dif x = a \dif u $; when $ x = a $, $ u = 1 $; when $ x = 0 $, $ u = 0 $. So:
+\begin{align*}
+    p & = \frac{1}{\pi a^2} \abs{a \int_0^1 \operatorname{e}^{-u^2} \dif u}^2\\
+    & = \frac{1}{\pi} \abs{0.747}^2\\
+    & = 0.178 \textrm{ (to 3 s.f.)}
+\end{align*}

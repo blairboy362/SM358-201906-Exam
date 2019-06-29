@@ -1,0 +1,55 @@
+\subsection{}
+The expectation value is given by:
+\begin{equation*}
+    \expectationvalue{p_x^2} = \expectationvalue{\widehat{p}_x^2}{\psi_n}
+\end{equation*}
+Where:
+\begin{equation*}
+    \widehat{p}_x^2 = - \frac{\hbar^2}{2a^2} \del{\loweringoperator \loweringoperator - \loweringoperator \raisingoperator - \raisingoperator \loweringoperator + \raisingoperator \raisingoperator}
+\end{equation*}
+So:
+\begin{align*}
+    \expectationvalue{p_x^2} & = - \frac{\hbar^2}{2a^2} \del{\sqrt{n} \sqrt{n-1} \braket{\psi_n}{\psi_{n-2}} - \del{n+1} \braket{\psi_n} - n \braket{\psi_n} + \sqrt{n+1} \sqrt{n+2} \braket{\psi_n}{\psi_{n+2}}}\\
+    & =  - \frac{\hbar^2}{2a^2} \del{- \del{n+1} - n}\\
+    & = \frac{\hbar^2}{2a^2} \del{2n + 1}
+\end{align*}
+For the third excited state, $ n = 3 $:
+\begin{equation*}
+    \expectationvalue{p_x^2} = \frac{7 \hbar^2}{2a^2}
+\end{equation*}
+For the fourth excited state, $ n = 4 $:
+\begin{equation*}
+    \expectationvalue{p_x^2} = \frac{9 \hbar^2}{2a^2}
+\end{equation*}
+
+\subsection{}
+Given $ E = \del{n + \frac{1}{2}} \hbar \omega_0 $ the expectation of the energy, $ E $, in this state is given by:
+\begin{align*}
+    \expectationvalue{E} & = \frac{1}{2}E_3 + \frac{1}{2}E_4\\
+    & = \frac{7}{4} \hbar \omega_0 + \frac{9}{4} \hbar \omega_0\\
+    & = 4 \hbar \omega_0
+\end{align*}
+
+\subsection{}
+shrug
+
+\subsection{}
+Given:
+\begin{align*}
+    \abs{I_{kj}}^2 & = \abs{\int_{-\infty}^{\infty} \psi_k^* \del{x} x \psi_j \del{x} \dif x}^4\\
+    \widehat{x} & = \frac{a}{\sqrt{2}} \del{\loweringoperator + \raisingoperator}
+\end{align*}
+Then:
+\begin{align*}
+    I_{kj} & = \frac{a^2}{2} \abs{\int_{-\infty}^{\infty} \psi_k^* \del{x} \del{\sqrt{j} \psi_{j-1} \del{x} + \sqrt{j+1} \psi_{j+1} \del{x}} \dif x}^2\\
+    & = \frac{a^2}{2} \abs{\sqrt{j} \int_{-\infty}^{\infty} \psi_k^* \del{x} \psi_{j-1} \del{x} \dif x + \sqrt{j+1} \int_{-\infty}^{\infty} \psi_k^* \del{x} \psi_{j+1} \del{x} \dif x}^2
+\end{align*}
+Which, by orthanormality, is only not equal to zero if $ k = j - 1 $ or $ k = j + 1 $.
+
+\begin{align*}
+    \abs{I_{j, j+1}}^2 & = \frac{a^4}{4} \abs{\sqrt{j+1} \int_{-\infty}^{\infty} \psi_j^* \del{x} \psi_j \del{x} \dif x + \sqrt{j+2} \int_{-\infty}^{\infty} \psi_j^* \del{x} \psi_{j+2} \del{x} \dif x}^4\\
+    & = \frac{\abs{j + 1}^2 a^4}{4}\\
+    \abs{I_{j+1,j}}^2 & = \frac{a^4}{4} \abs{\sqrt{j} \int_{-\infty}^{\infty} \psi_{j+1}^* \del{x} \psi_{j-1} \del{x} \dif x + \sqrt{j+1} \int_{-\infty}^{\infty} \psi_{j+1}^* \del{x} \psi_{j+1} \del{x} \dif x}^4\\
+    & = \frac{\abs{j + 1}^2 a^4}{4} = \abs{I_{j, j+1}}^2
+\end{align*}
+As required.

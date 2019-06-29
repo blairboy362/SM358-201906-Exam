@@ -1,0 +1,85 @@
+\subsection{}
+\begin{equation*}
+    \widehat{L}^2 = - \hbar^2 \sbr{\frac{1}{sin{\theta}} \dpd{}{\theta} \del{\sin{\theta} \dpd{}{\theta}} + \frac{1}{\sin^2{\theta}} \dpd[2]{}{\phi}}
+\end{equation*}
+As $ \widehat{L}^2 $ does not operate on any radial parts, that can be ignored. The spherical harmonic contains no terms in $ \phi $ so that part of the operator can be ignored. So:
+\begin{align*}
+    \widehat{L}^2 Y \del{\theta, \phi} & = - \hbar^2 \sbr{\frac{1}{sin{\theta}} \dpd{}{\theta} \del{\sin{\theta} \dpd{}{\theta} \del{\sqrt{\frac{3}{4 \pi}} \cos{\theta}}}}\\
+    & = 2 \hbar^2 \sqrt{\frac{3}{4 \pi}} \cos{\theta}\\
+    & = 2 \hbar^2 Y \del{\theta, \phi}
+\end{align*}
+So:
+\begin{align*}
+    2 \hbar^2 & = l \del{l + 1} \hbar^2\\
+    l & = 1
+\end{align*}
+
+\begin{equation*}
+    \widehat{L}_z = - \operatorname{i} \hbar \dpd{}{\phi}
+\end{equation*}
+As $ \psi $ contains no component in $ \phi $, this operator results in a value of $ 0 $, so $ m_l = 0 $.
+
+\subsection{}
+\begin{align*}
+    \widehat{H}\psi & = E \psi\\
+    -\frac{\hbar^2}{2 \mu}\laplacian \psi - \frac{e^2}{4 \pi \varepsilon_0} \frac{1}{r} \psi & = E \psi\\
+    -\frac{\hbar^2}{2 \mu} \del{\frac{1}{4 a_0^2} - \frac{2}{a_0 r}} \psi - \frac{e^2}{4 \pi \varepsilon_0} \frac{1}{r} \psi & = E \psi\\
+    - \frac{\hbar^2}{8 \mu a_0^2} + \frac{\hbar^2}{\mu a_0 r} - \frac{e^2}{4 \pi \varepsilon_0} \frac{1}{r} & = E
+\end{align*}
+Given:
+\begin{equation*}
+    E_{\textrm{R}} = \frac{\hbar^2}{2 \mu a_0^2} = \frac{e^2}{8 \pi \varepsilon_0 a_0}
+\end{equation*}
+Then:
+\begin{align*}
+    \frac{2 a_0}{r} E_{\textrm{R}} - \frac{1}{4} E_{\textrm{R}} - \frac{2 a_0}{r} E_{\textrm{R}} & = E\\
+    E & = - \frac{1}{4} E_{\textrm{R}}
+\end{align*}
+
+\subsection{}
+\begin{align*}
+    \expectationvalue{V} & = \expectationvalue{V}{R}\\
+    & = \frac{1}{8 a_0^3} \frac{4}{3} \frac{1}{4 a_0^2} \del{- \frac{e^2}{4 \pi \varepsilon_0}} \int_0^{\infty} r^3 \operatorname{e}^{-r/a_0} \dif r\\
+    & = - \frac{e^2}{96 \pi \varepsilon_0 a_0^5} \int_0^{\infty} r^3 \operatorname{e}^{-r/a_0} \dif r\\
+    & = - \frac{e^2}{96 \pi \varepsilon_0 a_0^5} \del{6 a_0^4}\\
+    & = - \frac{e^2}{16 \pi \varepsilon_0 a_0}\\
+    & = - \frac{1}{2} E_{\textrm{R}}
+\end{align*}
+
+So:
+\begin{align*}
+    \expectationvalue{E_{\textrm{kinetic}}} & = \expectationvalue{E} - \expectationvalue{V}\\
+    & = - \frac{1}{4} E_{\textrm{R}} - \del{- \frac{1}{2} E_{\textrm{R}}}\\
+    & = \frac{1}{4} E_{\textrm{R}}
+\end{align*}
+
+\subsection{}
+$ l = 1 $ so $ j = 1/2 $ or $ j = 3/2 $.
+
+For $ j = 1/2 $:
+\begin{align*}
+    \expectationvalue{\mathbf{L} \cdot \mathbf{S}} & = \hbar^2 \del{\tfrac{1}{2} \del{\tfrac{1}{2} + 1} - 1\del{1 + 1} - \tfrac{1}{2}\del{\tfrac{1}{2} + 1}}\\
+    & = -2\hbar^2
+\end{align*}
+
+For $ j = 3/2 $:
+\begin{align*}
+    \expectationvalue{\mathbf{L} \cdot \mathbf{S}} & = \hbar^2 \del{\tfrac{3}{2} \del{\tfrac{3}{2} + 1} - 1\del{1 + 1} - \tfrac{1}{2}\del{\tfrac{1}{2} + 1}}\\
+    & = \hbar^2
+\end{align*}
+
+For $ j = 1/2 $:
+\begin{align*}
+    \expectationvalue{U_{\textrm{SO}}}{R} & = -2\hbar^2 \frac{1}{8 a_0^3} \frac{4}{3} \frac{1}{4 a_o^2} \frac{a_0}{\mu^2 c^2} E_{\textrm{R}} \int_0^{\infty} r \operatorname{e}^{-r/a_0} \dif r\\
+    & = \frac{\hbar^2}{12 \mu^2 c^2 a_0^4} E_{\textrm{R}} \int_0^{\infty} r \operatorname{e}^{-r/a_0} \dif r\\
+    & = - \frac{\hbar^2}{12 \mu^2 c^2 a_0^4} E_{\textrm{R}} \del{a_0^2}\\
+    & = - \frac{\hbar^2}{12 \mu^2 c^2 a_0^2} E_{\textrm{R}}
+\end{align*}
+
+For $ j = 3/2 $:
+\begin{align*}
+    \expectationvalue{U_{\textrm{SO}}}{R} & = \hbar^2 \frac{1}{8 a_0^3} \frac{4}{3} \frac{1}{4 a_0^2} \frac{a_0}{\mu^2 c^2} E_{\textrm{R}} \int_0^{\infty} r \operatorname{e}^{-r/a_0} \dif r\\
+    & = \frac{\hbar^2}{24 a_0^4 \mu^2 c^2} E_{\textrm{R}} \int_0^{\infty} r \operatorname{e}^{-r/a_0} \dif r\\
+    & = \frac{\hbar^2}{24 a_0^4 \mu^2 c^2} E_{\textrm{R}} \del{a_0^2}\\
+    & = \frac{\hbar^2}{24 a_0^2 \mu^2 c^2} E_{\textrm{R}}
+\end{align*}
