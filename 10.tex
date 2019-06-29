@@ -1,0 +1,24 @@
+\subsection{}
+\begin{align*}
+    \psi_{\mathbf{k}} \del{\mathbf{r} + \mathbf{R}} & = u_{\mathbf{k}} \del{\mathbf{r} + \mathbf{R}} \operatorname{e}^{\operatorname{i} \mathbf{k} \cdot \del{\mathbf{r} + \mathbf{R}}}\\
+    & = u_{\mathbf{k}} \del{\mathbf{r}} \operatorname{e}^{\operatorname{i} \mathbf{k} \cdot \mathbf{r}} \operatorname{e}^{\operatorname{i} \mathbf{k} \cdot \mathbf{R}}\\
+    & = \psi_{\mathbf{k}} \del{\mathbf{r}} \operatorname{e}^{\operatorname{i} \mathbf{k} \cdot \mathbf{R}}
+\end{align*}
+
+\subsection{}
+We need to show that the probability density, $ \rho $, satisfies:
+\begin{equation*}
+    \rho \del{\mathbf{r} + \mathbf{R}} = \rho \del{\mathbf{r}}
+\end{equation*}
+
+So:
+\begin{align*}
+    \rho \del{\mathbf{r}} & = \psi_{\mathbf{k}}^* \del{\mathbf{r}} \psi_{\mathbf{k}} \del{\mathbf{r}}\\
+    & = \abs{\psi_{\mathbf{k}}}^2\\
+    \rho \del{\mathbf{r} + \mathbf{R}} & = \psi_{\mathbf{k}}^* \del{\mathbf{r} + \mathbf{R}} \psi_{\mathbf{k}} \del{\mathbf{r} + \mathbf{R}}\\
+    & = \psi_{\mathbf{k}}^* \del{\mathbf{r}} \operatorname{e}^{- \operatorname{i} \mathbf{k} \cdot \mathbf{R}} \psi_{\mathbf{k}} \del{\mathbf{r}} \operatorname{e}^{\operatorname{i} \mathbf{k} \cdot \mathbf{R}}\\
+    & = \abs{\psi_{\mathbf{k}}}^2\\
+    & = \rho \del{\mathbf{r}}
+\end{align*}
+
+Hence the probability density has the periodicity of the lattice.

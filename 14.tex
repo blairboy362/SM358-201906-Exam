@@ -1,0 +1,44 @@
+\subsection{}
+$ \psi_+ $ is symmetric as the function remains the same under label interchange. $ \psi_{-} $ does not, and hence is anti-symmetric.
+
+\subsection{}
+\ce{^{87}Rb} is comprised of 124 fermions and so behaves as a boson. Bosons have symmetric total wave functions.
+
+For $ \psi_+ \del{x_1, x_2} $, which is symmetric, the spin state must be one of the symmetric triplet states:
+\begin{align*}
+    \frac{1}{\sqrt{2}} \del{\ket{\uparrow \downarrow} + \ket{\downarrow \uparrow}} & = \ket{1, 0}\\
+    \ket{\uparrow \uparrow} & = \ket{1, 1}\\
+    \ket{\downarrow \downarrow} & = \ket{1, -1}
+\end{align*}
+
+For $ \psi_- \del{x_1, x_2} $, which is anti-symmetric, the spin state must be the anti-symmetric singlet state:
+\begin{equation*}
+    \frac{1}{\sqrt{2}} \del{\ket{\uparrow \downarrow} - \ket{\downarrow \uparrow}}
+\end{equation*}
+
+\subsection{}
+\begin{align*}
+    \expectationvalue{x_1,x_2} & = \expectationvalue{x_1,x_2}{\psi_{\pm}}\\
+    & = \frac{1}{a^4 \pi} \Biggl(\int_{-\infty}^{\infty} x_1^3 \operatorname{e}^{-x_1^2/a^2} \dif x_1 \int_{-\infty}^{\infty} x_2 \operatorname{e}^{-x_2^2/a^2} \dif x_2\\
+    & \quad \pm 2 \int_{-\infty}^{\infty} x_1^2 \operatorname{e}^{-x_1^2/a^2} \dif x_1 \int_{-\infty}^{\infty} x_2^2 \operatorname{e}^{-x_2^2/a^2} \dif x_2\\
+    & \quad + \int_{-\infty}^{\infty} x_1 \operatorname{e}^{-x_1^2/a^2} \dif x_1 \int_{-\infty}^{\infty} x_2^3 \operatorname{e}^{-x_2^2/a^2} \dif x_2 \Biggr)\\
+    & = \pm \frac{2}{a^4 \pi} \int_{-\infty}^{\infty} x_1^2 \operatorname{e}^{-x_1^2/a^2} \dif x_1 \int_{-\infty}^{\infty} x_2^2 \operatorname{e}^{-x_2^2/a^2} \dif x_2\\
+    & = \pm \frac{2}{a^4 \pi} \del{\frac{1}{2} a^3 \sqrt{\pi}} \del{\frac{1}{2} a^3 \sqrt{\pi}}\\
+    & = \pm \frac{a^2}{2}
+\end{align*}
+Hence, the expection for $ \psi_+ = a^2/2 $ and for $ \psi_- = - a^2/2 $.
+
+\subsection{}
+\begin{align*}
+    \expectationvalue{\del{x_1 - x_2}^2} & = \expectationvalue{x_1^2 - 2 x_1 x_2 + x_2^2}\\
+    & = \expectationvalue{x_1^2 + x_2^2} - 2 \expectationvalue{x_1 x_2}\\
+    & = 2a^2 - 2 \expectationvalue{x_1 x_2}\\
+    \textrm{For $ \psi_+ $: } \expectationvalue{\del{x_1 - x_2}^2} & = 2a^2 - 2 \del{\frac{a^2}{2}} = a^2\\
+    \textrm{For $ \psi_- $: } \expectationvalue{\del{x_1 - x_2}^2} & = 2a^2 - 2 \del{- \frac{a^2}{2}} = 3a^2
+\end{align*}
+
+The expectation values calculated in this part represent the average separation, so a smaller value represents more crowding together. As $ a > 0 $, the smaller of the two values would indicate more crowding together. Hence particles tend to crowd together in the state described by $ \psi_+ $.
+
+\subsection{}
+
+shrug

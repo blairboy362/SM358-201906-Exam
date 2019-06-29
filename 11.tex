@@ -1,0 +1,75 @@
+\subsection{}
+The TISE is given by:
+\begin{equation*}
+    - \frac{\hbar^2}{2m} \dod[2]{}{x} \psi \del{x} + V \del{x} \psi \del{x} = E \psi \del{x}
+\end{equation*}
+
+For $ x \leq 0 $:
+\begin{align*}
+    E & = U/2\\
+    V & = 0\\
+    \frac{\hbar^2 k^2}{2m} \psi \del{x} & = \frac{U}{2} \psi \del{x}\\
+    U & = \frac{\hbar^2 k^2}{m}
+\end{align*}
+
+For $ x > 0 $:
+\begin{align*}
+    E & = U/2\\
+    V & = U\\
+    - \frac{\hbar^2 \alpha^2}{2m} \psi \del{x} + U \psi \del{x} & = \frac{U}{2} \psi \del{x}\\
+    U = \frac{\hbar^2 \alpha^2}{m}
+\end{align*}
+
+Hence:
+\begin{align*}
+    U & = \frac{\hbar^2 k^2}{m} = \frac{\hbar^2 \alpha^2}{m}\\
+    k^2 & = \alpha^2\\
+    k & = \alpha
+\end{align*}
+As $ k $ and $ \alpha $ are both real and positive.
+
+\subsection{}
+$ C $ must be equal to $ 0 $ as $ \operatorname{e}^{\alpha x} \to \infty $ as $ x \to \infty $, which is not normaliseable.
+
+\subsection{}
+The boundary conditions are:
+\begin{itemize}
+    \item{$ \psi \del{x} $ is continuous at $ x = 0 $}
+    \item{$ \od{\psi \del{x}}{x} $ is continuous at $ x = 0 $}
+\end{itemize}
+
+Given that $ \alpha = k $ and $ x = 0 $, the boundary conditions give the simultaneous equations:
+\begin{align}
+    A + B & = D \label{eqn:11_c_1}\\
+    \operatorname{i} A - \operatorname{i} B & = -D \label{eqn:11_c_2}
+\end{align}
+Solving to give $ A $ and $ B $ in terms of $ D $:
+\begin{align}
+    A & = D - B \label{eqn:11_c_3} & \textrm{from \eqref{eqn:11_c_1}}\\
+    \operatorname{i} \del{D - B} - \operatorname{i}B & = - D \notag & \textrm{sub \eqref{eqn:11_c_3} into \eqref{eqn:11_c_2}}\\
+    \operatorname{i}D - 2 \operatorname{i}B & = -D \notag\\
+    B & = \frac{1 - \operatorname{i}}{2} D \label{eqn:11_c_4}\\
+    A + \frac{1 - \operatorname{i}}{2} D & = D \notag & \textrm{sub \eqref{eqn:11_c_4} into \eqref{eqn:11_c_1}}\\
+    A & = \frac{1 + \operatorname{i}}{2} D \label{eqn:11_c_5}
+\end{align}
+
+\subsection{}
+\begin{align*}
+    \mathllap{\abs{\psi \del{x}}^2} & = \abs{A \operatorname{e}^{\operatorname{i}kx} + B\operatorname{e}^{-\operatorname{i}kx}}^2\\
+    & = \abs{A}^2 + A^*B \operatorname{e}^{-2 \operatorname{i} kx} + AB^* \operatorname{e}^{2 \operatorname{i} kx} + \abs{B}^2\\
+    & = \frac{1}{4} D^* \del{1 - \operatorname{i}} D \del{1 + \operatorname{i}} + \frac{1}{4} D^* \del{1 - \operatorname{i}} D \del{1 - \operatorname{i}} \operatorname{e}^{-2 \operatorname{i} kx}\\
+    & \quad + \frac{1}{4} D^* \del{1 + \operatorname{i}} D \del{1 + \operatorname{i}} \operatorname{e}^{2 \operatorname{i} kx} + \frac{1}{4} D^* \del{1 + \operatorname{i}} D \del{1 - \operatorname{i}}\\
+    & = \frac{1}{2} \abs{D}^2 - \frac{1}{2} \operatorname{i} \abs{D}^2 \operatorname{e}^{-2 \operatorname{i} kx} + \frac{1}{2} \operatorname{i} \abs{D}^2 \operatorname{e}^{2 \operatorname{i} kx} + \frac{1}{2} \abs{D}^2\\
+    & = \abs{D}^2 \del{1 + \frac{1}{2} \operatorname{i} \del{\operatorname{e}^{2 \operatorname{i} kx} - \operatorname{e}^{-2 \operatorname{i} kx}}}\\
+    & = \abs{D}^2 \del{1 + \frac{1}{2} \operatorname{i} \del{2 \operatorname{i} \sin{\del{2kx}}}}\\
+    & = \abs{D}^2 \del{1 - \sin{\del{2kx}}}
+\end{align*}
+As required.
+
+\subsection{}
+\begin{align*}
+    R & = \abs{\frac{B}{A}}^2\\
+    & = \frac{D^* \del{1 + \operatorname{i}} D \del{1 - \operatorname{i}}}{D^* \del{1 - \operatorname{i}} D \del{1 + \operatorname{i}}}\\
+    & = 1
+\end{align*}
+As required.
