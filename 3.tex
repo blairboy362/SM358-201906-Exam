@@ -1,0 +1,34 @@
+\subsection{}
+
+The energy eigenfunction corresponding to energy $E_i$ is $\psi_i$.
+
+The overlap rule is given in the equation sheet:
+
+\begin{align*}
+  p_i = \abs{\int_{-\infty}^{\infty} \psi^{*}_{i}(x) \Psi(x,t) \dif{x}}^2
+\end{align*}
+
+Thus at $t=0$:
+
+\begin{align*}
+  p_i = \abs{\int_{-\infty}^{\infty} \psi^{*}_{i}(x) \Psi(x,0) \dif{x}}^2
+\end{align*}
+
+\subsection{}
+
+We can start by expanding the right-hand side:
+
+\begin{align*}
+  \int_{-\infty}^{\infty} \psi^{*}_{i}(x) \Psi(x,0) \dif{x}
+    = \int_{-\infty}^{\infty} \psi^{*}_{i}(x) \sum_n a_n \psi_n(x) \dif{x} \\
+    = \sum_n a_n \int_{-\infty}^{\infty} \psi^{*}_{i}(x) \psi_n(x) \dif{x}
+\end{align*}
+
+Due to orthonormality, $\int_{-\infty}^{\infty} \psi^{*}_{i}(x) \psi_n(x) \dif{x} = \delta_{in}$, where $\delta_{in}$ is the Kroenecker delta function which is equal to 1 for $i=n$ and equal to 0 for $i \neq n$. Thus, only the i-th element of the sum survives with the integral being equal to 1:
+
+\begin{align*}
+  \int_{-\infty}^{\infty} \psi^{*}_{i}(x) \Psi(x,0) \dif{x}
+    = a_i,
+\end{align*}
+
+as required.
