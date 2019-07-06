@@ -1,4 +1,6 @@
 \subsection{}
+\begingroup
+\addtolength{\jot}{0.8em}
 \begin{align*}
     \frac{\expectationvalue{\widehat{\operatorname{H}}}{\phi}}{\braket{\phi}} & = \frac{\sum_m a_m^* \psi_m^* \del{x} \widehat{\operatorname{H}} \sum_n a_n \psi_n \del{x}}{\sum_m a_m^* \psi_m^* \del{x} \sum_n a_n \psi_n \del{x}}\\
     & = \frac{\sum_m \sum_n a_m^* a_n \psi_m^* \del{x} \widehat{\operatorname{H}} \psi_n \del{x}}{\sum_m \sum_n a_m^* a_n \psi_m^* \del{x} \psi_n \del{x}}\\
@@ -8,6 +10,7 @@
     & = \frac{\sum_n a_n^* a_n E_n}{\sum_n a_n^* a_n}\\
     & = \frac{\sum_n \abs{a_n}^2 E_n}{\sum_n \abs{a_n}^2}\\
 \end{align*}
+\endgroup
 
 $ \geq E_{\textrm{gs}} $, since $ \abs{a_n}^2 $ is positive, and $ E_{\textrm{gs}} $, or $ E_1 $, has the lowest value of $ n $, and the lowest expectation value for energy (by definition).
 
