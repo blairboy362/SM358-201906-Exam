@@ -1,0 +1,57 @@
+\subsection{}
+
+By definition,
+
+\begin{align*}
+  [\hat{p}_x, \hat{x}^n] = \hat{p}_x \hat{x}^n - \hat{x}^n \hat{p}_x
+\end{align*}
+
+We allow this operator to act on an arbitrary function $f(x)$:
+
+\begin{align*}
+  [\hat{p}_x, \hat{x}^n] f(x) = \hat{p}_x \hat{x}^n f(x) - \hat{x}^n \hat{p}_x f(x)
+\end{align*}
+
+where $\hat{p}_x = -i\hbar \frac{\partial}{\partial{x}}$, and $\hat{x}^n = x^n$.
+
+\begin{align*}
+  \hat{p}_x \hat{x}^n f(x) - \hat{x}^n \hat{p}_x f(x) =
+    -i\hbar \frac{\partial}{\partial{x}} \big( x^n f(x) \big) - x^n (-i\hbar) \frac{\partial}{\partial{x}} f(x) = \\
+    -i\hbar \, n \, x^{n-1} f(x) - i\hbar \, x^n \, \frac{\partial}{\partial{x}} f(x) + i\hbar \, x^n \, \frac{\partial}{\partial{x}} f(x)
+\end{align*}
+
+The final two terms trivially cancel out, thus
+
+\begin{align*}
+  [\hat{p}_x, \hat{x}^n] f(x) = -i\hbar \, n \, x^{n-1} f(x) \implies [\hat{p}_x, \hat{x}^n] = -i\hbar \, n \, x^{n-1}.
+\end{align*}
+
+\subsection{}
+
+Generalized Ehrenfest theorem:
+
+\begin{align*}
+  \frac{\dif{\langle \textrm{A} \rangle}}{\dif{t}} = \frac{1}{i\hbar} \langle \big[ \hat{\textrm{A}}, \hat{\textrm{H}} \big] \rangle
+\end{align*}
+
+where $\hat{\textrm{H}}$ is the Hamiltonian operator of the system, and $\hat{\textrm{A}}$ is the observable in question. In our case:
+
+\begin{align*}
+  \frac{\dif{\langle p_x \rangle}}{\dif{t}} = \frac{1}{i\hbar} \langle \big[ \hat{\textrm{p}}_x, \hat{\textrm{H}} \big] \rangle
+\end{align*}
+
+Evaluating the commutator:
+
+\begin{align*}
+  \big[ \hat{\textrm{p}}_x, \hat{\textrm{H}} \big] &= \big[ \hat{\textrm{p}}_x, \frac{\hat{\textrm{p}}_{x}^2}{2m} + \frac{1}{2} C \hat{\textrm{x}}^4 \big] \\
+    &= \big[ \hat{\textrm{p}}_x, \frac{\hat{\textrm{p}}_{x}^2}{2m} \big] + \big[ \hat{\textrm{p}}_x, \frac{1}{2} C \hat{\textrm{x}}^4 \big] \\
+    &= \frac{1}{2m} \big[ \hat{\textrm{p}}_x, \hat{\textrm{p}}_{x}^2 \big] + \frac{C}{2} \big[ \hat{\textrm{p}}_x, \hat{\textrm{x}}^4 \big] \\
+    &= 4 (-i\hbar) \frac{C}{2} x^3
+\end{align*}
+
+because $[\hat{\textrm{p}}_x, \hat{\textrm{p}}_{x}^2]$ trivially commutes. Thus,
+
+\begin{align*}
+  \frac{\dif{\langle p_x \rangle}}{\dif{t}} &= \frac{1}{i\hbar} \langle -2 i\hbar C x^3 \rangle \\
+    &= -2 C \langle x^3 \rangle
+\end{align*}
