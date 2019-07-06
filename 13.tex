@@ -1,0 +1,173 @@
+\subsection{}
+\begin{align*}
+    \dod{\expectationvalue{S_x}}{t} & = \frac{1}{\operatorname{i} \hbar} \expectationvalue{\sbr{\widehat{\operatorname{S}}_x, \widehat{\operatorname{H}}}}\\
+    & = - \frac{\omega}{\operatorname{i} \hbar} \expectationvalue{\sbr{\widehat{\operatorname{S}}_x, \widehat{\operatorname{S}}_y}}\\
+    & = - \omega \expectationvalue{S_z}
+\end{align*}
+
+\subsection{}
+\begin{align*}
+    \widehat{\operatorname{H}} \ket{\uparrow_y} & = - \frac{\hbar \omega}{2}
+    \begin{bmatrix}
+        0 & -\operatorname{i}\\
+        \operatorname{i} & 0
+    \end{bmatrix}
+    \frac{1}{\sqrt{2}}
+    \begin{bmatrix}
+        1\\
+        \operatorname{i}
+    \end{bmatrix}
+    \\
+    & = - \frac{\hbar \omega}{2 \sqrt{2}}
+    \begin{bmatrix}
+        0 + 1\\
+        \operatorname{i} + 0
+    \end{bmatrix}
+    \\
+    & = - \frac{\hbar \omega}{2 \sqrt{2}}
+    \begin{bmatrix}
+        1\\\operatorname{i}
+    \end{bmatrix}
+    \\
+    & = - \frac{\hbar \omega}{2} \ket{\uparrow_y}
+\end{align*}
+
+Hence $ \ket{\uparrow_y} $ is an eigenvector of $ \widehat{\operatorname{H}} $ with eigenvalue $ E_u = - \frac{\hbar \omega}{2} $.
+
+\begin{align*}
+    \widehat{\operatorname{H}} \ket{\downarrow_y} & = - \frac{\hbar \omega}{2}
+    \begin{bmatrix}
+        0 & -\operatorname{i}\\
+        \operatorname{i} & 0
+    \end{bmatrix}
+    \frac{1}{\sqrt{2}}
+    \begin{bmatrix}
+        \operatorname{i}\\
+        1
+    \end{bmatrix}
+    \\
+    & = - \frac{\hbar \omega}{2 \sqrt{2}}
+    \begin{bmatrix}
+        0 - \operatorname{i}\\
+        -1 + 0
+    \end{bmatrix}
+    \\
+    & = - \frac{\hbar \omega}{2 \sqrt{2}}
+    \begin{bmatrix}
+        -\operatorname{i}\\-1
+    \end{bmatrix}
+    \\
+    & = \frac{\hbar \omega}{2} \ket{\downarrow_y}
+\end{align*}
+
+Hence $ \ket{\downarrow_y} $ is an eigenvector of $ \widehat{\operatorname{H}} $ with eigenvalue $ E_d = \frac{\hbar \omega}{2} $.
+
+\subsection{}
+\begin{align*}
+    \innerproduct{\uparrow_y}{A}_{\textrm{initial}} & = \frac{1}{\sqrt{2}}
+    \begin{bmatrix}
+        1 & -\operatorname{i}
+    \end{bmatrix}
+    \begin{bmatrix}
+        0\\1
+    \end{bmatrix}
+    \\
+    & = \frac{1}{\sqrt{2}} \del{0 - \operatorname{i}}\\
+    & = - \frac{\operatorname{i}}{\sqrt{2}}\\
+    \innerproduct{\downarrow_y}{A}_{\textrm{initial}} & = \frac{1}{\sqrt{2}}
+    \begin{bmatrix}
+        - \operatorname{i} & 1
+    \end{bmatrix}
+    \begin{bmatrix}
+        0\\1
+    \end{bmatrix}
+    \\
+    & = \frac{1}{\sqrt{2}} \del{0 + 1}\\
+    & = \frac{1}{\sqrt{2}}
+\end{align*}
+
+Hence:
+\begin{align*}
+    \ket{A}_{\textrm{initial}} & = \frac{1}{\sqrt{2}} \del{-\operatorname{i} \ket{\uparrow_y} + \ket{\downarrow_y}}
+\end{align*}
+
+\subsection{}
+\begin{align*}
+    \ket{A} & = \frac{1}{\sqrt{2}} \del{-\operatorname{i} \ket{\uparrow_y} \operatorname{e}^{-\operatorname{i}E_u t/\hbar} + \ket{\downarrow_y} \operatorname{e}^{-\operatorname{i}E_d t/\hbar}}\\
+    & = \frac{1}{\sqrt{2}} \del{-\operatorname{i} \ket{\uparrow_y} \operatorname{e}^{\operatorname{i} \omega t/2} + \ket{\downarrow_y} \operatorname{e}^{-\operatorname{i} \omega t/2}}\\
+    & = \frac{1}{2} \del{
+        \begin{bmatrix}
+            -\operatorname{i} \operatorname{e}^{\operatorname{i} \omega t/2}\\
+            \operatorname{e}^{\operatorname{i} \omega t/2}
+        \end{bmatrix}
+        +
+        \begin{bmatrix}
+            \operatorname{i} \operatorname{e}^{-\operatorname{i} \omega t/2}\\
+            \operatorname{e}^{-\operatorname{i} \omega t/2}
+        \end{bmatrix}
+    }\\
+    & = \frac{1}{2}
+    \begin{bmatrix}
+        -\operatorname{i} \operatorname{e}^{\operatorname{i} \omega t/2} + \operatorname{i} \operatorname{e}^{-\operatorname{i} \omega t/2}\\
+        \operatorname{e}^{\operatorname{i} \omega t/2} + \operatorname{e}^{-\operatorname{i} \omega t/2}
+    \end{bmatrix}\\
+    & = \frac{1}{2}
+    \begin{bmatrix}
+        -\operatorname{i} \del{\operatorname{e}^{\operatorname{i} \omega t/2} - \operatorname{e}^{-\operatorname{i} \omega t/2}}\\
+        \operatorname{e}^{\operatorname{i} \omega t/2} + \operatorname{e}^{-\operatorname{i} \omega t/2}
+    \end{bmatrix}
+    \\
+    & = \frac{1}{2}
+    \begin{bmatrix}
+        -\operatorname{i} \del{2 \operatorname{i} \sin{\del{\omega t / 2}}}\\
+        2 \cos{\del{\omega t / 2}}
+    \end{bmatrix}
+    \\
+    & =
+    \begin{bmatrix}
+        \sin{\del{\omega t / 2}}\\
+        \cos{\del{\omega t / 2}}
+    \end{bmatrix}
+\end{align*}
+As required.
+
+\subsection{}
+\begin{align*}
+    \expectationvalue{S_x} & = \expectationvalue{\widehat{\operatorname{S}}_x}{A}\\
+    & =
+    \begin{bmatrix}
+        \sin{\del{\omega t / 2}} & \cos{\del{\omega t / 2}}
+    \end{bmatrix}
+    \frac{\hbar}{2}
+    \begin{bmatrix}
+        0 & 1\\
+        1 & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+        \sin{\del{\omega t / 2}}\\
+        \cos{\del{\omega t / 2}}
+    \end{bmatrix}
+    \\
+    & = \frac{\hbar}{2} \del{2 \sin{\del{\omega t / 2}} \cos{\del{\omega t / 2}}}\\
+    & = \frac{\hbar}{2} \sin{\del{\omega t}}\\
+    \expectationvalue{S_z} & = \expectationvalue{\widehat{\operatorname{S}}_z}{A}\\
+    & = 
+    \begin{bmatrix}
+        \sin{\del{\omega t / 2}} & \cos{\del{\omega t / 2}}
+    \end{bmatrix}
+    \frac{\hbar}{2}
+    \begin{bmatrix}
+        1 & 0\\
+        0 & -1
+    \end{bmatrix}
+    \begin{bmatrix}
+        \sin{\del{\omega t / 2}}\\
+        \cos{\del{\omega t / 2}}
+    \end{bmatrix}
+    \\
+    & = \frac{\hbar}{2} \del{\sin^2{\del{\omega t / 2}} - \cos^2{\del{\omega t / 2}}}\\
+    & = - \frac{\hbar}{2} \cos{\del{\omega t}}\\
+    \dod{\expectationvalue{S_x}}{t} & = \frac{\hbar \omega}{2} \cos{\del{\omega t}}\\
+    & = - \omega \expectationvalue{S_z} & \textrm{confirming part a)}\\
+    \dod{\expectationvalue{S_z}}{t} & = \frac{\hbar \omega}{2} \sin{\del{\omega t}}
+\end{align*}
